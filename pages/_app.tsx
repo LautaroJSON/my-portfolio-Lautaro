@@ -1,9 +1,9 @@
 import Head from "next/head"
 import React from "react"
-import Layout from "../layout"
 import "./globalStyles.css"
+import Layout from "../layout"
 
-const _app = ({ Component, pageProps, router }) => {
+function App({ Component, pageProps, router }) {
   return (
     <Layout>
       <Head>
@@ -14,4 +14,4 @@ const _app = ({ Component, pageProps, router }) => {
   )
 }
 
-export default _app
+export default App
