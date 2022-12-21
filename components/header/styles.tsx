@@ -4,18 +4,26 @@ export const HeaderContent = styled.div`
   width: 100%;
   padding: 1rem 8rem;
   box-sizing: border-box;
-  background-color: rgb(43, 42, 40);
 
   display: flex;
-  // align-content: center;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+
+  background-color: rgb(38, 38, 38);
   white-space: nowrap;
 
   h2 {
+    animation: slidein 0.6s;
     font-family: "Chivo Mono", monospace;
     justify-self: center;
+    transition: 0.5s;
+  }
+
+  h2:hover {
+    cursor: default;
+    color: var(--primary-color);
+    transition: 0.5s;
   }
 
   ul {
@@ -25,6 +33,7 @@ export const HeaderContent = styled.div`
   }
 
   a {
+    animation: slidein 0.6s;
     position: relative;
     text-decoration: none;
     cursor: pointer;
@@ -45,5 +54,18 @@ export const HeaderContent = styled.div`
 
   a:hover::before {
     width: 100%;
+  }
+
+  @keyframes slidein {
+    from {
+      position: relative;
+      top: 30px;
+      color: transparent;
+    }
+
+    to {
+      position: relative;
+      top: 0px;
+    }
   }
 `
