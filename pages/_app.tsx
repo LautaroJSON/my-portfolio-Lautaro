@@ -1,17 +1,19 @@
+import type { AppProps } from "next/app"
 import Head from "next/head"
-import React from "react"
-import "./globalStyles.css"
 import Layout from "../layout"
+import "../styles/globalStyles.css"
 
-function App({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
+    <>
       <Head>
         <title>Lautaro&apos;s Homepage</title>
       </Head>
-      <Component {...pageProps} key={router.route} />
-    </Layout>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   )
 }
 
-export default App
+export default MyApp
