@@ -1,44 +1,48 @@
 import styled from "styled-components"
 
-export const HeaderContent = styled.div`
-  width: 100%;
-  padding: 1rem 8rem;
-  box-sizing: border-box;
-
+export const HeaderContent = styled.header`
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
 
-  background-color: rgb(38, 38, 38);
+  z-index: 2;
+
+  width: 100%;
+  top: 0;
+  padding: 0.6rem 12rem 0.6rem 12rem;
+  box-sizing: border-box;
+  background-color: var(--secondaty-color);
+  backdrop-filter: blur(10px);
   white-space: nowrap;
 
-  h2 {
-    animation: slidein 0.6s;
-    font-family: "Chivo Mono", monospace;
-    justify-self: center;
-    transition: 0.5s;
-  }
-
-  h2:hover {
-    cursor: default;
-    color: var(--primary-color);
-    transition: 0.5s;
-  }
+  position: fixed;
 
   ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 58px;
   }
 
   a {
-    animation: slidein 0.6s;
+    animation: slidein-disaper 0.8s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    animation-delay: 0.6s;
     position: relative;
     text-decoration: none;
+    color: white;
     cursor: pointer;
-    padding: 10px;
+    /* padding: 10px; */
     font-size: 1.5rem;
+  }
+
+  a:active {
+    background-color: var(--primary-color);
+    color: black;
+  }
+
+  a:link {
+    text-decoration: none;
   }
 
   a::before {
@@ -68,4 +72,71 @@ export const HeaderContent = styled.div`
       top: 0px;
     }
   }
+
+  @keyframes slidein-disaper {
+    from {
+      position: relative;
+      color: transparent;
+      top: 30px;
+    }
+
+    to {
+      visibility: visible;
+      position: relative;
+      top: 0px;
+    }
+  }
+
+  @media (max-width: 540px) {
+    gap: 30px;
+    padding: 0.3rem 4rem;
+
+    a {
+      padding: 0;
+      font-size: 1rem;
+    }
+
+    ul {
+      padding: 0px;
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 540px) {
+    gap: 30px;
+    padding: 0.3rem 4rem;
+
+    a {
+      padding: 0;
+      font-size: 1rem;
+    }
+
+    ul {
+      padding: 0px;
+      gap: 20px;
+    }
+  }
+`
+
+export const LogoContainer = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 4px;
+  animation: slidein-disaper 0.8s;
+
+  h1 {
+    position: relative;
+    bottom: -18px;
+    left: 2px;
+    margin: 0px;
+    font-weight: 600;
+  }
+
+  @media (max-width: 1045px) {
+    h1 {
+      display: none;
+    }
+  }
+
+  transition: 0.2s;
 `
