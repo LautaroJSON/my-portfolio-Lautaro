@@ -1,17 +1,18 @@
-import { TagChildren, TagStyle } from "./styles"
+import { TagChildren, TagContainer, TagStyle } from "./styles"
 
 interface Itag {
   children: JSX.Element
   tagName: string
+  margin?: boolean
 }
 
-const Tag = ({ children, tagName }: Itag) => {
+const Tag = ({ children, tagName, margin }: Itag) => {
   return (
-    <div>
+    <TagContainer>
       <TagStyle>{`<${tagName}>`}</TagStyle>
-      <TagChildren>{children}</TagChildren>
+      <TagChildren lastChild={margin}>{children}</TagChildren>
       <TagStyle>{`</${tagName}>`}</TagStyle>
-    </div>
+    </TagContainer>
   )
 }
 
