@@ -1,20 +1,30 @@
 import styled from "styled-components"
 
-export const LayoutContainer = styled.div``
+export const LayoutContainer = styled.div`
+  display: grid;
+  grid-template-rows: 11fr 1fr;
+  height: 100vh;
+  /* flex-direction: column; */
+  /* padding: 0px 40px; */
+  /* height: 100vh; */
+  /* display: flex; */
+`
 
-export const LayoutChilderenConteiner = styled.main`
-  margin-top: 100px;
-  margin-left: 12rem;
-  margin-right: 12rem;
+export const LayoutChilderenConteiner = styled.div`
+  /* padding-top: 84px; */
+  padding: 120px 310px 0px 80px;
 
-  box-sizing: border-box;
-  height: calc(100vh - 100px);
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  /* margin: 100px 12rem 0px 12rem; */
+  @media (max-width: 1120px) {
+    padding: 80px 80px 0px 40px;
+    h1 {
+      font-size: 1rem;
+    }
+    /* padding: 70px 12px 0 0; */
+    /* padding-top: 70px; */
+  }
 
   @media (max-width: 540px) {
-    margin: 70px 1rem 0px 1rem;
+    padding: 60px 34px 0 0;
+    /* padding-top: 70px; */
   }
 `
