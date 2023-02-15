@@ -14,7 +14,7 @@ const Home = () => {
               <Tag tagName="h1" margin>
                 <div className="animation-disaper">
                   <h1 className="secondary-font-color">
-                    I'm Lautaro Fernandez
+                    I&apos;m Lautaro Fernandez
                   </h1>
                   {/* <h2>{`// A Web App Developer`}</h2> */}
                 </div>
