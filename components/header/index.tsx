@@ -1,6 +1,7 @@
-import { HeaderContent, LogoContainer } from "./styles"
+import { HeaderContent } from "./styles"
 // import Image from "next/image"
 import { Logo } from "components/logo"
+import Link from "next/link"
 
 interface ISection {
   name: string
@@ -14,19 +15,20 @@ interface IHeader {
 function Header({ sections }: IHeader) {
   return (
     <HeaderContent>
-      <LogoContainer>
+      <div className="slidein-disaper-class">
         <Logo />
-        <h1>autaro Fernandez.</h1>
-      </LogoContainer>
-      <ul>
-        {sections.map((sec) => {
-          return (
-            <li key={sec?.name}>
-              <a href={sec.href}>{sec?.name}</a>
-            </li>
-          )
-        })}
-      </ul>
+      </div>
+      <nav>
+        <ul>
+          {sections.map((sec) => {
+            return (
+              <li key={sec?.name}>
+                <Link href={sec.href}>{sec?.name}</Link>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
     </HeaderContent>
   )
 }
