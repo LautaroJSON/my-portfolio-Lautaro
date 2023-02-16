@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="animation-disaper">
       <Tag tagName="About">
-        <h1>About</h1>
+        <h1>Coming soon 😀</h1>
       </Tag>
     </div>
   )
