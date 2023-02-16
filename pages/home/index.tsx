@@ -1,6 +1,4 @@
-// import { HomeSectionContainer, HomeTextContainer, Technologies } from "./styles"
 import styled from "styled-components"
-
 import Tag from "components/tag"
 import Image from "next/image"
 
@@ -187,7 +185,7 @@ export default function Home() {
             <div className="animation-disaper">
               <Tag tagName="p" margin>
                 <div className="animation-disaper">
-                  <p>{`I'm a full-stack Developer`}</p>
+                  <p>{`Full-stack Developer`}</p>
                 </div>
               </Tag>
             </div>
