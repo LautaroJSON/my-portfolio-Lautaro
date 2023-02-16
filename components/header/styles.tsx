@@ -9,7 +9,6 @@ export const HeaderContent = styled.header`
 
   display: grid;
   grid-template-columns: 5fr 3fr;
-  /* background-color: var(--secondaty-color); */
   align-items: center;
   padding: 12px 120px;
 
@@ -68,7 +67,6 @@ export const HeaderContent = styled.header`
   }
 
   .slidein-disaper-class {
-    /* animation-delay: 1s; */
     animation: slidein-disaper 1s;
     animation-fill-mode: forwards;
     visibility: hidden;
@@ -81,7 +79,7 @@ export const HeaderContent = styled.header`
     ul {
       gap: 30px;
     }
-    /* padding:  */
+
     a {
       padding: 0;
       font-size: 1.2rem;

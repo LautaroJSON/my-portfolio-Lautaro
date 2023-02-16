@@ -16,14 +16,10 @@ const Layout = ({ children }: ILayout) => {
   return (
     <LayoutContainer>
       <Header sections={SECTIONS_HEADER} />
-      {/* <div> */}
       <LayoutChilderenConteiner>
-        {/* <div className="animation-disaper">
-        </div> */}
         <Tag tagName="main">{children}</Tag>
       </LayoutChilderenConteiner>
       <Footer />
-      {/* </div> */}
     </LayoutContainer>
   )
 }
