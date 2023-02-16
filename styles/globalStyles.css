@@ -39,7 +39,7 @@ body {
 /* Custom Scrollbar suported by Chrome, Edge, and Safari */
 
 *::-webkit-scrollbar {
-  width: 14px;
+  width: 12px;
 }
 
 *::-webkit-scrollbar-track {
@@ -48,7 +48,7 @@ body {
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
-  border: 2px solid var(--secondaty-color);
+  /* border: 2px solid var(--secondaty-color); */
 }
 
 /* animations */
