@@ -4,6 +4,7 @@ export const LayoutContainer = styled.div`
   display: grid;
   grid-template-rows: 11fr 1fr;
   height: 100vh;
+  overflow-x: hidden;
   /* flex-direction: column; */
   /* padding: 0px 40px; */
   /* height: 100vh; */
