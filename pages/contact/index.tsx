@@ -1,4 +1,5 @@
 import Tag from "components/tag"
+import { useEffect } from "react"
 
 const Contact = () => {
   return (

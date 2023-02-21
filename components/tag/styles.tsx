@@ -1,8 +1,9 @@
 import styled from "styled-components"
 
 export const TagStyle = styled.div`
-  color: #d1d1d13c;
+  color: #ffffff30;
   font-style: italic;
+  letter-spacing: 0.1rem;
   @media (max-width: 540px) {
     font-size: 0.8rem;
   }

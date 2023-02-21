@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Tag from "components/tag"
 import Image from "next/image"
+import { useEffect } from "react"
 
 const HomeSectionContainer = styled.section`
   @media (max-width: 540px) {
@@ -16,7 +17,7 @@ const HomeSectionContainer = styled.section`
 `
 const HomeTextContainer = styled.div`
   h1 {
-    font-size: 3.5rem;
+    font-size: 5rem;
   }
 
   h2 {
@@ -29,9 +30,11 @@ const HomeTextContainer = styled.div`
   }
 
   p {
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: #ffffff;
     margin: 0;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.2rem;
   }
 
   .bubble {
@@ -86,6 +89,7 @@ const Technologies = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   grid-gap: 20px;
   grid-auto-flow: dense;
+  /* width: 1100px; */
 
   align-items: center;
   justify-items: center;
@@ -129,17 +133,15 @@ export default function Home() {
             <div className="animation-disaper">
               <Tag tagName="h1" margin>
                 <div className="animation-disaper">
-                  <h1 className="secondary-font-color">
-                    I&apos;m Lautaro Fernandez
-                  </h1>
-                  {/* <h2>{`// A Web App Developer`}</h2> */}
+                  <h1 className="secondary-font-color">I&apos;m Lautaro</h1>
+                  <h1 className="secondary-font-color">Full-Stack Developer</h1>
                 </div>
               </Tag>
             </div>
             <div className="animation-disaper">
               <Tag tagName="p" margin>
                 <div className="animation-disaper">
-                  <p>{`Full-stack Developer`}</p>
+                  <p>{`Front End NextJs & Angular | SRR`}</p>
                 </div>
               </Tag>
             </div>
