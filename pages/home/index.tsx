@@ -133,8 +133,12 @@ export default function Home() {
             <div className="animation-disaper">
               <Tag tagName="h1" margin>
                 <div className="animation-disaper">
-                  <h1 className="secondary-font-color">I&apos;m Lautaro</h1>
-                  <h1 className="secondary-font-color">Full-Stack Developer</h1>
+                  <h1 className="secondary-font-color tranparent-label">
+                    I&apos;m Lautaro
+                  </h1>
+                  <h1 className="secondary-font-color tranparent-label">
+                    Full-Stack Developer
+                  </h1>
                 </div>
               </Tag>
             </div>
