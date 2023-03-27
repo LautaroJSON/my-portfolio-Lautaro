@@ -145,7 +145,7 @@ export default function Home() {
             <div className="animation-disaper">
               <Tag tagName="p" margin>
                 <div className="animation-disaper">
-                  <p>{`Front End NextJs & Angular | SRR`}</p>
+                  <p>{`Front-End React & NextJs`}</p>
                 </div>
               </Tag>
             </div>
