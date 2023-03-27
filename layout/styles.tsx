@@ -8,10 +8,10 @@ export const LayoutContainer = styled.div`
 `
 
 export const LayoutChilderenConteiner = styled.div`
-  padding: 120px 310px 0px 80px;
+  padding: 120px 310px 60px 80px;
 
   @media (max-width: 1120px) {
-    padding: 80px 80px 0px 40px;
+    padding: 80px 80px 20px 40px;
     h1 {
       font-size: 1rem;
     }

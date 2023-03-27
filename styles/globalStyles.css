@@ -11,19 +11,36 @@
 body {
   padding: 0;
   margin: 0;
-  /* background-color: #1e1e1e; */
+  background: rgb(0, 89, 149);
   background: linear-gradient(
-    222deg,
+    137deg,
     rgba(3, 0, 50, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
+    rgba(0, 0, 0, 1) 50%,
+    rgba(206, 48, 232, 1) 50%,
+    rgba(2, 103, 171, 1) 100%
   );
+
+  animation: gradient 10s ease-in-out infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+
   color: white;
   font-family: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100vw;
   transition: all 1s ease-out;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 .secondary-font {
