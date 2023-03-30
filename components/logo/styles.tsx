@@ -1,18 +1,19 @@
 import styled from "styled-components"
 
 export const LogoStyled = styled.div`
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  box-sizing: border-box;
+  background-color: white;
+  /* border-radius: 6px; */
   width: 46px;
   height: 46px;
 
-  box-sizing: border-box;
-  border-radius: 6px;
-  background-color: white;
-
-  position: relative;
-
   transition: all 0.6s;
 
-  &:before {
+  ::before {
     content: "L";
     font-size: 2rem;
     font-weight: 600;
@@ -22,7 +23,7 @@ export const LogoStyled = styled.div`
     bottom: -5px;
     right: 5px;
   }
-
+  /* 
   &:after {
     content: "autaro Fernandez.";
     font-size: 2rem;
@@ -32,9 +33,9 @@ export const LogoStyled = styled.div`
     position: absolute;
     bottom: -5px;
     left: 50px;
-  }
+  } */
 
-  &:hover {
+  :hover {
     box-shadow: 0 0 0 0.2em white;
     background-color: transparent;
 

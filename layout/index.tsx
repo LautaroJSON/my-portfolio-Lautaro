@@ -1,5 +1,7 @@
 import Footer from "components/footer"
 import Header from "components/header"
+import { Logo } from "components/logo"
+import { Sidebar } from "components/sidebar"
 import Tag from "components/tag"
 import { LayoutChilderenConteiner, LayoutContainer } from "./styles"
 
@@ -15,11 +17,11 @@ export const SECTIONS_HEADER: Array<{ name: string; href: string }> = [
 const Layout = ({ children }: ILayout) => {
   return (
     <LayoutContainer>
-      <Header sections={SECTIONS_HEADER} />
       <LayoutChilderenConteiner>
         <Tag tagName="main">{children}</Tag>
       </LayoutChilderenConteiner>
-      <Footer />
+      <Logo />
+      <Sidebar sections={SECTIONS_HEADER} />
     </LayoutContainer>
   )
 }

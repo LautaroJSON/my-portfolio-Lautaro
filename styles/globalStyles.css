@@ -1,17 +1,20 @@
 :root {
   --main-bg-color: #131313;
-  --primary-color: #3178c6;
-  --secondaty-color-solid: rgba(38, 38, 38);
+  --primary-color: #3178c6; /* typescript blue color ;) */
+  --paragraph-color: #c9c9c9;
   --secondaty-color: rgba(38, 38, 38, 0.8);
-  --secondaty-color-white: rgb(255, 255, 255);
-
-  scroll-behavior: smooth;
+  --secondaty-color-solid: rgba(38, 38, 38);
+  --white-color: rgb(255, 255, 255);
 }
 
+/* body tag only used for setting margin 0pc, color and font-family */
 body {
-  padding: 0;
   margin: 0;
-  background: rgb(0, 89, 149);
+  color: var(--paragraph-color);
+  font-family: "Open Sans", sans-serif;
+}
+/* class for animated bg */
+.background-body {
   background: linear-gradient(
     137deg,
     rgba(3, 0, 50, 1) 0%,
@@ -22,32 +25,9 @@ body {
 
   animation: gradient 15s ease-in-out infinite;
   background-size: 400% 400%;
-  background-attachment: fixed;
-
-  color: white;
-  font-family: "Open Sans", sans-serif;
-  display: flex;
-  flex-direction: column;
-  transition: all 1s ease-out;
 }
 
-.secondary-font {
-  font-family: "Chivo Mono", monospace;
-}
-
-.secondary-font-color {
-  color: var(--primary-color);
-}
-
-.indent {
-  margin-left: 25px;
-}
-
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 20;
-}
-
-.tranparent-label {
+.background-font {
   background: linear-gradient(
     137deg,
     rgba(2, 103, 171, 1) 0%,
@@ -57,25 +37,82 @@ body {
   );
   animation: gradient 15s ease-in-out infinite;
   background-size: 250% 250%;
+  background-clip: text;
+  color: transparent;
+}
 
-  background-clip: text; /* Establecer la máscara de texto para WebKit (Safari y Chrome) */
-  color: transparent; /* Establecer el color de texto transparente para WebKit (Safari y Chrome) */
-  background-clip: text; /* Establecer la máscara de texto para otros navegadores */
+h1 {
+  font-size: 4rem;
+  margin: 0;
+  line-height: 4rem;
+  /* white-space: nowrap; */
+}
+
+p {
+  font-size: smaller;
+}
+
+@media screen and (max-width: 1120px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  h1 {
+    line-height: 2rem;
+    text-align: center;
+    letter-spacing: -1px;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    text-align: center;
+  }
+}
+
+.indent {
+  margin-left: 2rem;
 }
 
 /* Custom Scrollbar suported by Chrome, Edge, and Safari */
 
 *::-webkit-scrollbar {
-  width: 12px;
+  width: 6px;
+  /* border-radius: 5px; */
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--secondaty-color);
+  /* background: var(--main-bg-color); */
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
-  /* border: 2px solid var(--secondaty-color); */
+  background-color: var(--secondaty-color-solid);
+  border-radius: 10px;
+}
+
+.svg-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.svg-icon path,
+.svg-icon g path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #2d2d2d;
+}
+
+.svg-icon circle {
+  stroke: #000000;
+  stroke-width: 1;
 }
 
 /* animations */

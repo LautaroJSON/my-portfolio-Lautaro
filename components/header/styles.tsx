@@ -4,17 +4,17 @@ export const HeaderContent = styled.header`
   position: fixed;
   width: 100%;
   box-sizing: border-box;
-  z-index: 2;
   backdrop-filter: blur(10px);
 
-  display: grid;
-  grid-template-columns: 5fr 3fr;
+  display: flex;
+  /* grid-template-columns: 5fr 3fr; */
+  justify-content: space-around;
   align-items: center;
   padding: 12px 120px;
 
-  nav {
+  /* nav {
     height: 100%;
-  }
+  } */
 
   ul {
     display: flex;

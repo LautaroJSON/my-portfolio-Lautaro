@@ -15,7 +15,7 @@ function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body>
+      <body className="background-body">
         <Main />
         <NextScript />
       </body>
