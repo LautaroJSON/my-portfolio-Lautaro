@@ -282,7 +282,8 @@ const HomeComponent = () => {
             width={250}
             height={200}
           ></img>
-          <h2>no se que poner</h2>
+          <h2>Lorem Lorem</h2>
+          <p>Este porfolio esta en progreso...</p>
         </div>
       </div>
     </HomeSectionContainer>
